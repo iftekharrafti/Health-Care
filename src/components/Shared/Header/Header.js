@@ -23,7 +23,7 @@ const Header = () => {
             {
               user.email ? 
               <Link to="/login">
-                <Button className="btn" variant="outline-info">Logout</Button>
+                <Button className="btn" variant="outline-info">Logouts</Button>
             </Link>
               :
               <div>
