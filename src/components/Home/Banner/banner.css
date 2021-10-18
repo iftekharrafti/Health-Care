@@ -18,5 +18,7 @@ p{
 }
 .btn{
     padding: 8px 15px;
-    border-radius: 10px
+    border-radius: 10px;
+    margin-right:15px;
+    margin-left: 15px;
 }

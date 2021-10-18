@@ -1,9 +1,13 @@
 import React from "react";
-import { Card, Col, Container } from "react-bootstrap";
+import { Button, Card, Col, Container } from "react-bootstrap";
+import { Link, useParams, useHistory } from "react-router-dom";
 import './serviceDetails.css';
 
 const ServiceDetails = (props) => {
-  const { name, description, img } = props.service;
+  const { id, name, description, img } = props.service;
+  const {serviceId} = useParams();
+
+  
   return (
     <div>
       <Container>
@@ -14,6 +18,11 @@ const ServiceDetails = (props) => {
               <Card.Title>{name}</Card.Title>
               <Card.Text>{description}</Card.Text>
             </Card.Body>
+            <Card.Footer>
+                <Link to={`/serviceDetails/${id}`}>
+                    <Button  variant="outline-secondary">See More</Button>
+                </Link>
+            </Card.Footer>
           </Card>
         </Col>
       </Container>
