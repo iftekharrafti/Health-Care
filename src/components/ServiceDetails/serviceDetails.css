@@ -1,0 +1,8 @@
+.service-details{
+    height:400px;
+}
+.service-details .card-title{
+    font-size:25px;
+    font-weight: 700;
+    text-align: center;
+}
