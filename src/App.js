@@ -11,6 +11,7 @@ import NotFound from "./components/NotFound/NotFound";
 import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Login from "./components/Shared/Login/Login";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
+import Signup from "./components/Shared/Signup/Signup";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/signup">
+              <Signup></Signup>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
