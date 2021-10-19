@@ -12,6 +12,9 @@ import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Login from "./components/Shared/Login/Login";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
 import Signup from "./components/Shared/Signup/Signup";
+import SingleServiceDetails from "./components/SingleServiceDetails/SingleServiceDetails";
+import Footer from "./components/Shared/Footer/Footer";
+import OurDepartment from "./components/OurDepartment/OurDepartment";
 
 function App() {
   return (
@@ -33,10 +36,13 @@ function App() {
               <Services></Services>
             </Route>
             <Route path="/serviceDetails/:serviceId">
-              <ServiceDetails></ServiceDetails>
+              <SingleServiceDetails></SingleServiceDetails>
             </Route>
             <Route path="/doctor">
               <Doctors></Doctors>
+            </Route>
+            <Route path="/department">
+              <OurDepartment></OurDepartment>
             </Route>
             <Route path="/login">
               <Login></Login>
@@ -48,6 +54,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </BrowserRouter>
       </AuthProvider>
     </div>

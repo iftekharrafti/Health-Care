@@ -1,0 +1,14 @@
+.department{
+    margin: 50px 0;
+}
+.department span{
+    font-size: 18px;
+    color: #1E0B9B;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+.department h3{
+    font-size: 46px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}

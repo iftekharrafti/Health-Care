@@ -1,47 +1,54 @@
-import React from "react";
-import { Button } from "react-bootstrap";
-import { useForm } from "react-hook-form";
-import useAuth from "../../hooks/useAuth";
+import React, {useState} from "react";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import "./login.css";
+import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const {user, signInWithGoogle} = useAuth();
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+    const {signInWithGoogle} = useAuth();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
+
+    const auth = getAuth();
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value);
+    }
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value);
+    }
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        signInWithEmailAndPassword(auth, email, password)
+        .then(result => {
+            console.log(result.user)
+        })
+    }
 
   return (
     <div className="login">
       <h2>Login</h2>
       <div className="login-form">
-        <form onSubmit={handleSubmit(onSubmit)}>
-          {/* Email */}
-          <input
-            type="email"
-            defaultValue=""
-            {...register("example", { required: true })}
-            placeholder="Enter Your Email"
-          />
-
-          {/* Password */}
-          <input
-            type="password"
-            {...register("exampleRequired", { required: true })}
-            placeholder="Enter Your Password"
-          />
-          {/* errors */}
-          {errors.exampleRequired && <span>This field is required</span>}
-
-          <input type="submit" />
+        <form onSubmit={handleLogin}>
+          <div className="row">
+              <div className="col">
+                      <div className="form-group mb-4">
+                          <label htmlFor="email">Email</label>
+                          <input onBlur={handleEmailChange} type="email" placeholder="Enter Your Email" />
+                      </div>
+                      <div className="form-group">
+                          <label htmlFor="password">Password</label>
+                          <input onBlur={handlePasswordChange} type="Password" placeholder="Enter Your Password" />
+                      </div>
+                      <p className="text-danger">{error}</p>
+                      <button className="btn btn-secondary mt-3" type="submit">Login</button>
+              </div>
+          </div>
         </form>
       </div>
       <div className="icons">
-        <Button onClick={signInWithGoogle} className="btn-facebook" variant="outline-info">
-        <i class="fab fa-google"></i>
-        </Button>
+      <button onClick={signInWithGoogle} className="btn-facebook"><i class="fab fa-google"></i></button>
       </div>
     </div>
   );

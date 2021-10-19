@@ -5,7 +5,7 @@ import './serviceDetails.css';
 
 const ServiceDetails = (props) => {
   const { id, name, description, img } = props.service;
-  const {serviceId} = useParams();
+  
 
   
   return (
