@@ -19,7 +19,7 @@ const Footer = () => {
                 <div className="copyright">
                     <Row>
                         <Col>
-                            <p>All rights reserved &copy; Calivard</p>
+                            <p>All rights reserved &copy; <a href="https://www.facebook.com/iftekhar.rafti">Calivard</a></p>
                         </Col>
                     </Row>
                 </div>

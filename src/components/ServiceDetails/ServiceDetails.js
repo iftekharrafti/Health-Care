@@ -7,7 +7,6 @@ const ServiceDetails = (props) => {
   const { id, name, description, img } = props.service;
   
 
-  
   return (
     <div>
       <Container>
@@ -18,7 +17,7 @@ const ServiceDetails = (props) => {
               <Card.Title>{name}</Card.Title>
               <Card.Text>{description}</Card.Text>
             </Card.Body>
-            <Card.Footer>
+            <Card.Footer className="text-center">
                 <Link to={`/serviceDetails/${id}`}>
                     <Button  variant="outline-secondary">See More</Button>
                 </Link>

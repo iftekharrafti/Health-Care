@@ -2,3 +2,10 @@
     height:570px;
     text-align:center;
 }
+.doctor-img{
+    height:70%;
+}
+.doctor-img img{
+    height:100%;
+    object-fit: cover;
+}

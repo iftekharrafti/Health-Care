@@ -3,12 +3,13 @@ import banner from "./slider.png";
 import "./banner.css";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import '../../../components/responsive.css';
 
 const Banner = () => {
   return (
     <div
       className="banner"
-      style={{ background: `url(${banner})`, backgroundSize: "cover" }}
+      style={{ background: `url(${banner})`, backgroundSize: "cover", backgroundPosition:"center" }}
     >
       <Container>
         <Row>
