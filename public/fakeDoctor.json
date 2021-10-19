@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "name":"Dr Samia Jahan",
+        "category": "Medicine Specialist",
+        "img": "https://i.ibb.co/7Cvc6sz/team01.png"
+    },
+    {
+        "id":2,
+        "name":"Dr Hari Sarkar",
+        "category": "Medicine Specialist",
+        "img": "https://i.ibb.co/zbYn1xP/team02.png"
+    },
+    {
+        "id":3,
+        "name":"Dr Abu Nasser",
+        "category": "Medicine Specialist",
+        "img": "https://i.ibb.co/Rjp3Qgj/team03.png"
+    },
+    {
+        "id":4,
+        "name":"Dr Dipu",
+        "category": "Medicine Specialist",
+        "img": "https://i.ibb.co/StRtWPb/8.jpg"
+    },
+    {
+        "id":5,
+        "name":"Dr Tarik Ahmed",
+        "category": "Medicine Specialist",
+        "img": "https://i.ibb.co/BNQj2LG/Portrait-of-happy-mature-medical-doctor-standing-against-white-background.jpg"
+    },
+    {
+        "id":6,
+        "name":"Dr Tanvir Hasan",
+        "category": "Medicine Specialist",
+        "img": "https://i.ibb.co/0mFVzYJ/6.jpg"
+    }
+]

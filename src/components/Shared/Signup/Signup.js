@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import "../Login/login.css";

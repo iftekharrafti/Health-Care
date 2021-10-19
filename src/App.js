@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home/Home/Home";
@@ -8,13 +7,13 @@ import About from "./components/About/About";
 import Services from "./components/Services/Services";
 import Doctors from "./components/Doctors/Doctors";
 import NotFound from "./components/NotFound/NotFound";
-import ServiceDetails from "./components/ServiceDetails/ServiceDetails";
 import Login from "./components/Shared/Login/Login";
 import AuthProvider from "./context/AuthProvider/AuthProvider";
 import Signup from "./components/Shared/Signup/Signup";
 import SingleServiceDetails from "./components/SingleServiceDetails/SingleServiceDetails";
 import Footer from "./components/Shared/Footer/Footer";
 import OurDepartment from "./components/OurDepartment/OurDepartment";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -35,9 +34,9 @@ function App() {
             <Route path="/services">
               <Services></Services>
             </Route>
-            <Route path="/serviceDetails/:serviceId">
+            <PrivateRoute path="/serviceDetails/:serviceId">
               <SingleServiceDetails></SingleServiceDetails>
-            </Route>
+            </PrivateRoute>
             <Route path="/doctor">
               <Doctors></Doctors>
             </Route>

@@ -29,17 +29,9 @@ const OurDepartment = () => {
                 </Card.Text>
               </Card.Body>
             </Card>
-            <Card >
-              <Card.Body>
-                <Card.Title>Physicians</Card.Title>
-                <Card.Text>
-                A physician (American English), medical practitioner (Commonwealth English), medical doctor, or simply doctor, is a professional who practices medicine, which is concerned with promoting
-                </Card.Text>
-              </Card.Body>
-            </Card>
           </Col>
           <Col>
-            <img src={department} alt="" />
+            <img className="img-fluid" src={department} alt="" />
           </Col>
         </Row>
       </Container>
